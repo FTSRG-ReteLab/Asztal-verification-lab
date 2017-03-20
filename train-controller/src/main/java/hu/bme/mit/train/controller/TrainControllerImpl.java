@@ -55,7 +55,7 @@ public class TrainControllerImpl implements TrainController {
 	@Override
 	public void setJoystickPosition(int joystickPosition) {
 		this.step = joystickPosition;	
-		timer.scheduleAtFixedRate(new FollowSpeedTask(), 1000, 1000);	//Please change it to 2000!
+		timer.scheduleAtFixedRate(new FollowSpeedTask(), 2000, 2000);
 	}
 
 }
