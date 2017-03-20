@@ -32,12 +32,14 @@ public class TrainSystemTest {
 		Assert.assertEquals(0, controller.getReferenceSpeed());
 		
 		user.overrideJoystickPosition(5);
+		
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
-		controller.followSpeed();
-		Assert.assertEquals(5, controller.getReferenceSpeed());
-		controller.followSpeed();
-		Assert.assertEquals(10, controller.getReferenceSpeed());
-		controller.followSpeed();
 		Assert.assertEquals(10, controller.getReferenceSpeed());
 	}
 
